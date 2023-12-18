@@ -11,7 +11,7 @@ import "@/styles/custom.css"
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 
-console.log(API_URL, "API URL!")
+export const runtime = 'edge';
 
 interface ArticleObject {
     id: number;
