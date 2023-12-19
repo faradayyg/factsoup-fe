@@ -7,7 +7,6 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export default function ArticleCreateForm () {
     const [submitting, setSubmitting] = useState<boolean>(false);
     const router = useRouter();
-    console.log(API_URL)
 
     const submitArticle = async (event: FormEvent<HTMLFormElement>) => {
         setSubmitting(true);
@@ -18,7 +17,7 @@ export default function ArticleCreateForm () {
         myHeaders.append("Content-Type", "application/json");
 
         const request = await fetch(
-            `${API_URL}/generate-article/`,
+            `${API_URL}generate-article/`,
             {
                 method: "POST",
                 body: JSON.stringify(data),
